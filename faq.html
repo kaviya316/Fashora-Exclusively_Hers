@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs-FASHORA</title>
+    <style>
+        body {
+        
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+            margin: 20px;
+            background-image: url("39.jpg");
+            background-size:contain;
+
+        }
+        .faq-container {
+            max-width: 800px;
+            margin: auto;
+            background-color:rgb(196, 186, 96);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .faq-question {
+            font-size: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+        .faq-answer {
+            display: none;
+            padding: 10px 0;
+            color:white;
+        }
+        .arrow {
+            font-size: 20px;
+            transition: transform 0.3s ease;
+        }
+        .faq-item.active .arrow {
+            transform: rotate(90deg);
+        }
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="faq-container">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>What is Fashora?</span>
+            <span class="arrow">&#9654;</span>
+        </div>
+        <div class="faq-answer">Fashora is a personalized styling service that curates fashion choices based on your preferences.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>How does this work?</span>
+            <span class="arrow">&#9654;</span>
+        </div>
+        <div class="faq-answer">You take a style quiz, and we provide a curated list of fashion items tailored to your style.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>Can I update my style preferences later?</span>
+            <span class="arrow">&#9654;</span>
+        </div>
+        <div class="faq-answer">Of course! You can change your preferences anytime in your profile settings.</div>
+    </div>
+
+    
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>How will you know my size?</span>
+            <span class="arrow">&#9654;</span>
+        </div>
+        <div class="faq-answer">We ask for your measurements in the style quiz to ensure the best fit.</div>
+    </div>
+    
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>Do you style non-working women or style for non work-related occasions such as weddings?</span>
+            <span class="arrow">&#9654;</span>
+        </div>
+        <div class="faq-answer">‘Working women’ is our mission for now! We’re venturing into new spaces slowly, so keep an eye out on our social media.</div>
+    </div>
+    
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>Why should I opt for Fashora instead of hiring a personal stylist?</span>
+            <span class="arrow">&#9654;</span>
+        </div>
+        <div class="faq-answer">A personal stylist in the traditional sense would offer you their services at a significant fee over several time consuming consultations. At Fashora, you can have access to the same level of personal attention and shopping services in a very time-conscious,affordable way. All of this can be done from the convenience of your home and in a fun, interesting manner!</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>Do you have showrooms?</span>
+            <span class="arrow">&#9654;</span>
+        </div>
+        <div class="faq-answer">None at the moment, but maybe someday.</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>How does your AI stylist work?</span>
+            <span class="arrow">&#9654;</span>
+        </div>
+        <div class="faq-answer">Our AI analyzes your preferences, body type, and fashion goals to suggest personalized outfits and wardrobe updates.</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>Is the AI stylist free to use?</span>
+            <span class="arrow">&#9654;</span>
+        </div>
+        <div class="faq-answer">We offer both free and premium plans with advanced styling features.</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>Do I need to upload photos for the AI to work?</span>
+            <span class="arrow">&#9654;</span>
+        </div>
+        <div class="faq-answer">Not necessarily. You can answer a style quiz, but uploading images enhances accuracy.</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>How can I contact support if I have issues?</span>
+            <span class="arrow">&#9654;</span>
+        </div>
+        <div class="faq-answer">You can reach out via email or live chat for assistance.</div>
+    </div>
+
+
+
+     
+<script>
+    document.querySelectorAll(".faq-question").forEach(item => {
+        item.addEventListener("click", () => {
+            let parent = item.parentElement;
+            parent.classList.toggle("active");
+        });
+    });
+</script>
+
+</body>
+</html>

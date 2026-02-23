@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .banner {
+            width: 100%;
+  height: 415px;
+  object-fit: cover;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        .gallery img {
+            width: 130px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <img src="fall.jpg" alt="Summer Lookbook" class="banner">
+
+    <div class="gallery" id="imageContainer"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let container = document.getElementById("imageContainer");
+
+            let images = [
+               "https://i.pinimg.com/736x/61/e1/50/61e150110e5ae5945236f5f76f3a9b90.jpg",
+               "https://i.pinimg.com/736x/14/4f/ab/144fab494838511f45ad54b32c149a1b.jpg",
+               "https://i.pinimg.com/736x/6f/ba/36/6fba361f4b723b3e82231211f1e078dc.jpg",
+               "https://i.pinimg.com/736x/2c/e7/2f/2ce72f7538d72eafca7427d5b46726d9.jpg",
+               "https://i.pinimg.com/736x/b5/59/65/b55965b8948a54b670a535dc85ae34ad.jpg",
+               "https://m.media-amazon.com/images/I/41WcgUzpweL._SX300_SY300_QL70_FMwebp_.jpg",
+               "https://i.pinimg.com/736x/7c/d3/54/7cd354eac35a9b20f2db7bf30a2488a6.jpg",
+               "https://i.pinimg.com/736x/23/99/07/2399074ade489b3f9b76a918cbe4f077.jpg",
+               "https://i.pinimg.com/736x/6f/96/b7/6f96b72e9eaa2a3943395754993b3aa7.jpg",
+               "https://m.media-amazon.com/images/I/71VUh4oFaLL._SY550_.jpg",
+               "https://i.pinimg.com/736x/24/9a/e5/249ae52dc4602cd061fb652fed49797a.jpg",
+               "https://i.pinimg.com/736x/0f/22/9e/0f229e23c43317df7540dae5676dee83.jpg",
+               "https://i.pinimg.com/736x/72/e6/8c/72e68c393b3d341690071578fcd79055.jpg",
+               "https://i.pinimg.com/736x/bd/ca/4a/bdca4a3c6e8b81bf578da3ea2a007dc7.jpg",
+               "https://i.pinimg.com/736x/25/a0/05/25a005244e71252f6cf82118a53a8114.jpg",
+               "https://i.pinimg.com/736x/2a/c0/1e/2ac01e89397fcf118a9ed91bcf8ff7be.jpg"
+            ];
+
+            images.forEach(src => {
+                let img = document.createElement("img");
+                img.src = src;
+                img.alt = "Spring Fashion";
+                container.appendChild(img);
+            });
+        });
+    </script>
+</body>
+</html>
